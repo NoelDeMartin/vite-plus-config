@@ -1,0 +1,36 @@
+import type { OxfmtConfig } from 'vite-plus/fmt';
+import type { OxlintConfig } from 'vite-plus/lint';
+
+export const fmt: OxfmtConfig = {
+    semi: true,
+    singleQuote: true,
+    tabWidth: 4,
+    printWidth: 120,
+    sortImports: true,
+    sortTailwindcss: true,
+};
+
+export const lint: OxlintConfig = {
+    options: {
+        typeAware: true,
+        typeCheck: true,
+    },
+    rules: {
+        'no-console': 'error',
+        'no-unused-expressions': 'off',
+        'no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
+        'typescript/consistent-type-imports': 'error',
+        'typescript/explicit-module-boundary-types': 'error',
+        'typescript/no-explicit-any': ['warn', { ignoreRestArgs: true }],
+        'typescript/no-unsafe-declaration-merging': 'off',
+    },
+    overrides: [
+        {
+            files: ['**/*.test.ts'],
+            rules: {
+                'typescript/no-duplicate-type-constituents': 'off',
+                'typescript/unbound-method': 'off',
+            },
+        },
+    ],
+};
