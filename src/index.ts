@@ -22,8 +22,10 @@ export const lint: OxlintConfig = {
         'no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
         'typescript/consistent-type-imports': 'error',
         'typescript/explicit-module-boundary-types': 'error',
+        'typescript/no-base-to-string': 'off',
         'typescript/no-explicit-any': ['warn', { ignoreRestArgs: true }],
         'typescript/no-unsafe-declaration-merging': 'off',
+        'typescript/restrict-template-expressions': 'off',
     },
     overrides: [
         {
