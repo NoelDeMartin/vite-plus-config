@@ -37,6 +37,7 @@ export const lint: OxlintConfig = {
 };
 
 export const pack: PackUserConfig = {
+    unbundle: true,
     sourcemap: true,
     dts: true,
     fixedExtension: false,
