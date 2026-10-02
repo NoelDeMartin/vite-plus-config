@@ -1,5 +1,6 @@
 import type { OxfmtConfig } from 'vite-plus/fmt';
 import type { OxlintConfig } from 'vite-plus/lint';
+import type { PackUserConfig } from 'vite-plus/pack';
 
 export const fmt: OxfmtConfig = {
     semi: true,
@@ -34,3 +35,13 @@ export const lint: OxlintConfig = {
         },
     ],
 };
+
+export const pack: PackUserConfig = {
+    sourcemap: true,
+    dts: true,
+    fixedExtension: false,
+    publint: true,
+    attw: { profile: 'esm-only' },
+};
+
+export * from './plugins/index.ts';
