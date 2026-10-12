@@ -47,4 +47,5 @@ export const pack: PackUserConfig = {
     attw: { profile: 'esm-only' },
 };
 
+export * from './lib/index.ts';
 export * from './plugins/index.ts';
